@@ -194,7 +194,7 @@ form button {
 
   .form-container {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     background-size: cover;
     background-image: url('./assets/forrmBackgroundMob.png');
     flex-direction: column;
