@@ -1,0 +1,105 @@
+html {
+    font-size: 10px;
+}
+
+
+.banner-container {
+    height: 100vh;
+    opacity: .97;
+    background-color: #161615;
+    width: 100%;
+    background-image: url('../assets/starbottom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: 80%;
+    position: relative;
+    align-items: center;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Syne';
+    color: #FFFFFF;
+    font-size: 7rem;
+    padding: 0;
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+.fresh {
+    position: absolute;
+    font-weight: 800;
+    /* border: 1px solid white; */
+    left: 7.5rem;
+    height: 100px;
+    top: -1.4rem;
+}
+
+.numb {
+    font-family: inherit;
+    position: absolute;
+    font-weight: 800;
+    top: 8rem;
+    color: transparent;
+    -webkit-text-stroke: 2px  #FFFFFF;
+    left: 35rem;
+}
+
+.look {
+    position: absolute;
+    bottom: 3rem;
+    left: 15rem;
+    font-weight: 800;
+}
+
+.see-more {
+    position: absolute;
+    left: 100px;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    top: 590px;
+    padding: 20px;
+    height: 550px;
+}
+
+@media (max-width: 390px) {
+    html {
+        font-size: 70%;
+    }
+
+    .banner-container {
+        height: 682px;
+    }
+
+    .see-more {
+        position: absolute; 
+        left: 0.5rem;
+    }
+    .banner-text {
+        position: absolute;
+        top: -5rem;
+        font-size: 3.5rem;
+    }
+
+    .fresh {
+        left: 1rem;
+        top: 52rem;
+    }
+
+    .numb {
+        top: 57rem;
+        left: 10rem;
+    }
+
+    .look {
+        top: 63rem;
+        left: 3.4rem;
+    }
+}
