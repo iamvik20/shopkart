@@ -63,10 +63,10 @@ html {
     position: absolute;
     left: 100px;
     cursor: pointer;
-    /* border: 1px solid white; */
+    border: 1px solid white;
     top: 590px;
     padding: 20px;
-    height: 550px;
+    height: 65px;
 }
 
 @media (max-width: 390px) {
