@@ -1,7 +1,7 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import bannerLine from '../assets/BannerLine.png'
 
 const navbar = [
@@ -22,6 +22,7 @@ const navbar = [
 
 function Navigation() {
     const [dropdownOpen, setDropdownOpen] = useState(null);
+    const windowSize = useRef([window.innerWidth])
 
     const toggleDropdown = (id) => {
         setDropdownOpen(dropdownOpen === id ? null : id);
@@ -29,24 +30,27 @@ function Navigation() {
 
     const [showMenu, setShowMenu] = useState(false);
 
-    const toggleMenu = () => {
+
+
+    const toggleMenu = () => {   
       setShowMenu(!showMenu);
     };
 
     return (
         <nav>
-            <div className='banner-content' >
+            <div className='banner-content'  >
                 <span className='logo'>ShopKart</span>
+                <button className='button-nav' onClick={toggleMenu} >
+                    <i className={`fa-solid ${showMenu ? 'fa-xmark' : 'fa-bars'} fa-xl`}></i>
+                </button>
                 <div className='cart-items'>
                     <span style={{padding: '0px 1rem'}}>WHISHLIST(0)</span>
                     <span style={{padding: '0px 1rem'}}>BAG(0)</span>
                 </div>
-                <div className={`button-nav ${showMenu ? 'show' : ''}`} hidden>
-                    <button onClick={toggleMenu}><i className="fa-solid fa-bars fa-xl"></i></button>
-                </div>
+                
             </div>
             <img className="banner-line" src={bannerLine} />
-            <ul className='main-nav'>
+            <ul className={` main-nav ${showMenu ? 'show' : '' }`}>
                 {navbar.map((item) => (
                     <li key={item.id} onMouseEnter={() => toggleDropdown(item.id)} onMouseLeave={() => toggleDropdown(null)}>
                         <Link to={`/`}>{item.name}</Link>

@@ -83,6 +83,7 @@ html {
         left: 0.5rem;
     }
     .banner-text {
+        height: 10px;
         position: absolute;
         top: -5rem;
         font-size: 3.5rem;
