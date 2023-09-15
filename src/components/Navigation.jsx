@@ -40,7 +40,7 @@ function Navigation() {
         <nav>
             <div className='banner-content'  >
                 <span className='logo'>ShopKart</span>
-                <button className='button-nav' onClick={toggleMenu} >
+                <button className='button-nav' onClick={toggleMenu} hidden>
                     <i className={`fa-solid ${showMenu ? 'fa-xmark' : 'fa-bars'} fa-xl`}></i>
                 </button>
                 <div className='cart-items'>

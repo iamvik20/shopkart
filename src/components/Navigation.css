@@ -36,7 +36,7 @@ nav {
     position: absolute;
     right: 1rem;
     display: inline-flex;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     align-items: center;
     justify-content: flex-end;
     font-family: 'Poppins', sans-serif;
